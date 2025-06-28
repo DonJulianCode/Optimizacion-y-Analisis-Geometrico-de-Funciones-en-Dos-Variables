@@ -1,210 +1,46 @@
-Optimización y Visualización de Funciones Multivariables
-(Google Colab / Jupyter Notebook)
-
-Este proyecto presenta el análisis simbólico y visual de funciones de dos variables utilizando Python, con enfoque en el cálculo de derivadas parciales, gradiente, matriz Hessiana y visualización de puntos críticos.
-
-La ejecución está diseñada para entornos interactivos como Google Colab o Jupyter Notebook, donde cada bloque de código se acompaña de comentarios y visualizaciones dinámicas (incluyendo animaciones 3D).
+Análisis y Visualización de Funciones de Dos Variables
+Este proyecto, desarrollado en Google Colab o Jupyter Notebook, aplica conceptos de cálculo multivariable para analizar funciones de dos variables. Se utilizan herramientas simbólicas y gráficas para encontrar y clasificar puntos críticos, y se incluye una animación 3D de la función.
 
 Objetivo
-Aplicar herramientas del cálculo diferencial multivariable para analizar funciones de dos variables y comprender cómo estos conceptos se aplican a problemas de optimización, incluyendo su conexión con técnicas de Machine Learning.
+Calcular derivadas parciales, gradiente y matriz Hessiana.
 
-Contenido del Notebook
-Definición simbólica de la función
-Ejemplo:
+Encontrar y clasificar puntos críticos (mínimo, máximo, punto de silla).
 
-𝑔
-(
-𝑥
-,
-𝑦
-)
-=
-𝑥
-2
-+
-3
-𝑦
-2
-−
-4
-𝑥
-+
-2
-𝑦
-+
-1
-g(x,y)=x 
-2
- +3y 
-2
- −4x+2y+1
-Cálculo del gradiente y matriz Hessiana
+Visualizar en 3D y con mapa de contorno la función y sus características.
 
-Derivadas parciales:
-∂
-𝑔
-∂
-𝑥
-,
-∂
-𝑔
-∂
-𝑦
-∂x
-∂g
-​
- , 
-∂y
-∂g
-​
- 
+Mostrar su relevancia en técnicas de optimización usadas en Machine Learning.
 
-Gradiente: 
-∇
-𝑔
-(
-𝑥
-,
-𝑦
-)
-∇g(x,y)
+Funcionalidades
+Cálculo simbólico con sympy.
 
-Matriz Hessiana:
-
-𝐻
-𝑔
-(
-𝑥
-,
-𝑦
-)
-=
-[
-∂
-2
-𝑔
-∂
-𝑥
-2
-∂
-2
-𝑔
-∂
-𝑥
-∂
-𝑦
-∂
-2
-𝑔
-∂
-𝑦
-∂
-𝑥
-∂
-2
-𝑔
-∂
-𝑦
-2
-]
-H 
-g
-​
- (x,y)=[ 
-∂x 
-2
- 
-∂ 
-2
- g
-​
- 
-∂y∂x
-∂ 
-2
- g
-​
- 
-​
-  
-∂x∂y
-∂ 
-2
- g
-​
- 
-∂y 
-2
- 
-∂ 
-2
- g
-​
- 
-​
- ]
-Determinación y clasificación de puntos críticos
-
-Se resuelve 
+Resolución de puntos críticos resolviendo 
 ∇
 𝑔
 =
-(
 0
-,
-0
-)
-∇g=(0,0)
+∇g=0.
 
-Se evalúan los valores propios de la matriz Hessiana para clasificar los puntos:
+Clasificación según los valores propios de la matriz Hessiana.
 
-Mínimo local
+Gráficos en 3D y contorno con matplotlib.
 
-Máximo local
+Animación 3D rotatoria que muestra claramente la superficie y el punto crítico.
 
-Punto de silla
-
-Visualización de resultados
-
-Superficie 3D de la función con el punto crítico marcado
-
-Mapa de contorno (2D)
-
-Animación rotatoria 3D del gráfico usando matplotlib.animation (para mejor comprensión geométrica)
-
-Discusión: Conexión con Machine Learning
-
-El cálculo del gradiente es la base del descenso de gradiente, el algoritmo más común para minimizar funciones de pérdida en el entrenamiento de modelos.
-
-El análisis del comportamiento local mediante la Hessiana permite entender la curvatura de la superficie y la convergencia del modelo.
+Comentario sobre Machine Learning, conectando el gradiente con el descenso de gradiente.
 
 Requisitos
-Este proyecto se ejecuta en Google Colab o Jupyter Notebook.
-Bibliotecas necesarias (pueden instalarse vía pip si es necesario):
-
 bash
 Copiar
 Editar
 pip install sympy numpy matplotlib ipython
-¿Cómo usar este código?
-Abre el notebook en Google Colab.
+Cómo usar
+Abre el notebook en Google Colab o Jupyter.
 
-Ejecuta cada celda de código secuencialmente.
+Ejecuta cada bloque de código en orden.
 
-Observa los resultados simbólicos, los gráficos y la animación rotatoria generada.
+Observa los resultados y gráficos generados.
 
-Capturas sugeridas (para documentación)
-Gradiente simbólico y Hessiana
-
-Evaluación en el punto crítico
-
-Clasificación automática basada en valores propios
-
-Visualización 3D con punto crítico marcado
-
-Animación 3D rotatoria
+El video 3D se muestra como animación integrada.
 
 Autor
-Julián Gómez Brizuela
-Miembro fundador del Proyecto Fénix, junto al Sr. Pikerton
-🧠 Explorador de ideas, calculadora simbólica humana, amante del jurel y de los relojes retro.
+Julián Gómez Brizuela🌟
